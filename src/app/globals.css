@@ -17,17 +17,44 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ background-color: white;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+#tbl2 tr{
+  border:2px solid black;
+}
+#tbl3 tr{
+  border:0 ;
+}
+#tbl3{
+  border-top:none;
+  border-bottom: none;
+}
+#tbl1 td{
+  border:2px solid black;
+}
+input{
+  border:2px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+body{
+  width:100%;
+}
+table{
+  border-color: black;
+}
+
+table td{
+  padding-left:5px;
+  padding-right:5px;
+}
+.no-top-border {
+  border-top: none !important; /* Use !important if necessary */
+  border-bottom: none !important; /* Use !important if necessary */
 }
