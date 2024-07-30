@@ -194,14 +194,14 @@ export default  function GetFormData({ displayform, setdisplayform, setbillData,
                 </tr>
                 </tbody>
             </table>
-            <form action={ ()=> {
+            {/* <form action={ ()=> {
                     setdisplayform('hidden')
                     setdisplaydata('');
                 
                 }}>
                 <button type="submit" className="bg-blue-600 text-white px-5 py-2 rounded-lg mt-5 mx-10" >Next</button>
-            </form>
-            {/* <Btn setdisplayform={setdisplayform} setdisplaydata={setdisplaydata} location={location}/> */}
+            </form> */}
+            <Btn setdisplayform={setdisplayform} setdisplaydata={setdisplaydata} location={location}/>
             
         </div>
     )
