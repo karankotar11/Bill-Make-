@@ -8,7 +8,7 @@ export default  function Btn({ setdisplayform, setdisplaydata,location }) {
             e.preventDefault();
             
             try {
-              const res = await fetch('/api/saveloc', {
+              const res = await fetch('/api', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
