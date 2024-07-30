@@ -1,4 +1,4 @@
-'use server'
+
 import connectToDB from "@/database";
 import LocationofUser from "@/model"
 
