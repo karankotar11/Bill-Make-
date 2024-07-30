@@ -1,18 +1,35 @@
-'use client'
-import { SaveLocation } from "@/actions";
+
 
 export default  function Btn({ setdisplayform, setdisplaydata,location }) {
-   const svall=async()=>{
+   const svall=async(e)=>{
         setdisplayform('hidden')
         setdisplaydata('');
-        try{
-            const data = await SaveLocation(location)
-        console.log(data) 
-        }
-        catch(e){
-            console.log("Error in svall",e)
-        }
        
+            e.preventDefault();
+            
+            try {
+              const res = await fetch('https://karankotar11.github.io/Bill-Make-/api', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ location }),
+              });
+        
+              const data = await res.json();
+              console.log(data)
+          
+            
+        
+              if (data.success) {
+                console.log('Location saved successfully:', data);
+              } else {
+                console.error('Error saving location:', data.error);
+              }
+            } catch (error) {
+              console.error('Network error:', error);
+            }
+          
     }
     // async function sett(){
     //     const data = await SaveLocation(location)
