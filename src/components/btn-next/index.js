@@ -8,7 +8,7 @@ export default  function Btn({ setdisplayform, setdisplaydata,location }) {
             e.preventDefault();
             
             try {
-              const res = await fetch('https://karankotar11.github.io/Bill-Make-/api', {
+              const res = await fetch('/api/saveloc', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
