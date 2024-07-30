@@ -1,4 +1,4 @@
-
+'use client'
 import { SaveLocation } from "@/actions";
 
 export default  function Btn({ setdisplayform, setdisplaydata,location }) {
